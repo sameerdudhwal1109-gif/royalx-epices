@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RoyalX Spices | Har Pakwan Mein Royal Swad</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0f0f0f;
+      color: #fff;
+    }
+    header {
+      background: linear-gradient(135deg, #000, #7a0000);
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      margin: 0;
+      color: gold;
+      letter-spacing: 2px;
+    }
+    nav a {
+      color: #fff;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover { color: gold; }
+
+    .hero {
+      padding: 80px 20px;
+      text-align: center;
+      background: url('https://images.unsplash.com/photo-1604909052743-94e838986d24') center/cover no-repeat;
+    }
+    .hero h2 {
+      font-size: 42px;
+      margin-bottom: 10px;
+      color: gold;
+    }
+    .hero p {
+      font-size: 20px;
+      background: rgba(0,0,0,0.6);
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 10px;
+    }
+
+    .section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    .section h3 {
+      text-align: center;
+      color: gold;
+      margin-bottom: 40px;
+      font-size: 32px;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #1c1c1c;
+      padding: 20px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 0 15px rgba(255,215,0,0.15);
+    }
+    .card h4 { color: gold; }
+
+    .about {
+      line-height: 1.7;
+      text-align: center;
+      color: #ddd;
+    }
+
+    footer {
+      background: #000;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #aaa;
+    }
+  button{margin-top:10px;padding:10px 15px;border:none;border-radius:20px;background:gold;color:#000;font-weight:bold;cursor:pointer;}button:hover{background:#ffd700;}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>ROYALX SPICES</h1>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#products">Products</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <h2>Har Pakwan Mein Royal Swad</h2>
+  <p>Pure • Fresh • Premium Indian Spices</p>
+</section>
+
+<section class="section" id="products">
+  <h3>Our Products</h3>
+  <div class="products">
+    <div class="card">
+      <img src="images/haldi.jpg" alt="RoyalX Haldi Powder" style="width:100%;border-radius:10px;" />
+      <h4>Haldi Powder</h4>
+      <p>Pure & Natural Turmeric</p>
+      <button onclick="order('Haldi Powder')">Order on WhatsApp</button>
+    </div>
+    <div class="card">
+      <img src="images/chilli.jpg" alt="RoyalX Red Chilli Powder" style="width:100%;border-radius:10px;" />
+      <h4>Red Chilli Powder</h4>
+      <p>Spicy & Vibrant Colour</p>
+      <button onclick="order('Red Chilli Powder')">Order on WhatsApp</button>
+    </div>
+    <div class="card">
+      <img src="images/dhaniya.jpg" alt="RoyalX Dhaniya Powder" style="width:100%;border-radius:10px;" />
+      <h4>Dhaniya Powder</h4>
+      <p>Fresh Coriander Aroma</p>
+      <button onclick="order('Dhaniya Powder')">Order on WhatsApp</button>
+    </div>
+    <div class="card">
+      <img src="images/garam-masala.jpg" alt="RoyalX Garam Masala" style="width:100%;border-radius:10px;" />
+      <h4>Garam Masala</h4>
+      <p>Traditional Blend</p>
+      <button onclick="order('Garam Masala')">Order on WhatsApp</button>
+    </div>
+  </div>
+    <div class="card"><h4>Red Chilli Powder</h4><p>Spicy & Vibrant Colour</p><button onclick="order('Red Chilli Powder')">Order on WhatsApp</button></div>
+    <div class="card"><h4>Dhaniya Powder</h4><p>Fresh Coriander Aroma</p><button onclick="order('Dhaniya Powder')">Order on WhatsApp</button></div>
+    <div class="card"><h4>Garam Masala</h4><p>Perfect Blend of Spices</p><button onclick="order('Garam Masala')">Order on WhatsApp</button></div>
+  </div>
+</section>
+
+<section class="section about" id="about">
+  <h3>About RoyalX Spices</h3>
+  <p>
+    RoyalX Spices brings you carefully selected and hygienically processed spices
+    to give every dish a royal taste. We focus on purity, freshness, and authentic Indian flavour.
+  </p>
+</section>
+
+<section class="section about" id="contact">
+  <h3>Contact Us</h3>
+  <p>
+    📞 Phone: +91-XXXXXXXXXX<br />
+    📧 Email: royalxspices@gmail.com<br />
+    📍 Made in India 🇮🇳
+  </p>
+</section>
+
+<footer>
+  © 2025 RoyalX Spices | Har Pakwan Mein Royal Swad
+</footer>
+<script>
+function order(product){
+  const phone = '91XXXXXXXXXX';
+  const msg = `Hello RoyalX Spices, mujhe ${product} order karna hai.`;
+  window.open(`https://wa.me/${phone}?text=${encodeURIComponent(msg)}`, '_blank');
+}
+</script>
+
+</body>
+</html>
